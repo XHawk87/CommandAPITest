@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'uk.co.hawks_haven'
-version = '0.0.0'
+version = '0.0.1'
 
 repositories {
     mavenCentral()
@@ -18,16 +18,19 @@ repositories {
         url = "https://oss.sonatype.org/content/groups/public/"
     }
     maven { url = "https://repo.codemc.org/repository/maven-public/" }
+    maven { url = "https://s01.oss.sonatype.org/content/repositories/snapshots" }
 }
 
 dependencies {
     compileOnly "io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT"
-    implementation "dev.jorel:commandapi-bukkit-shade:9.3.0"
+//    implementation "dev.jorel:commandapi-bukkit-shade:9.3.0"
+    implementation "dev.jorel:commandapi-bukkit-shade:9.4.0-SNAPSHOT"
 }
 
 shadowJar {
     dependencies {
-        include dependency("dev.jorel:commandapi-bukkit-shade:9.3.0")
+//        include dependency("dev.jorel:commandapi-bukkit-shade:9.3.0")
+        include dependency("dev.jorel:commandapi-bukkit-shade:9.4.0-SNAPSHOT")
     }
     relocate("dev.jorel.commandapi", "uk.co.hawks_haven.commandapitest.shaded.dev.jorel.commandapi")
 }
