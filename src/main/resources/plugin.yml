@@ -1,0 +1,7 @@
+name: CommandAPITest
+version: '${version}'
+main: uk.co.hawks_haven.commandapitest.CommandAPITest
+api-version: '1.20'
+load: STARTUP
+authors: [XHaw87]
+website: github.com/XHawk87
